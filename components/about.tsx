@@ -32,7 +32,7 @@ export default function About() {
           >
             <div className="relative w-64 h-64 rounded-full overflow-hidden border-4 border-[#3B82F6] dark:border-[#60A5FA]">
               <Image
-                src="/anil-port.png"
+                src="/profile.jpeg"
                 alt="Anil Yadav"
                 fill
                 className="object-cover scale-150"
