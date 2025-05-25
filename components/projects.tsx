@@ -15,6 +15,7 @@ interface Project {
   techStack: string[];
   githubUrl: string;
   liveUrl: string;
+  status: "Completed" | "In Progress";
 }
 
 const projects: Project[] = [
@@ -28,6 +29,7 @@ const projects: Project[] = [
     techStack: ["Next.js", "Tailwind CSS", "TypeScript", "Shadcn/UI", "Vercel"],
     githubUrl: "https://github.com/anilyadav45/AgriConnect",
     liveUrl: "https://farmybuddy-agriconnect.vercel.app",
+    status: "In Progress",
   },
   {
     id: 2,
@@ -39,37 +41,42 @@ const projects: Project[] = [
     techStack: ["React", "Node.js", "MongoDB", "Express"],
     githubUrl: "#",
     liveUrl: "#",
+    status: "In Progress",
   },
   {
-  id: 3,
-  title: "Crickment - Mini Social App for Cricket Fans",
-  description:
-    "A lightweight social platform where users can post opinions, debate about their favorite players, and share cricket snaps. Built with full CRUD operations to manage posts, edit content, and delete discussions easily.",
-  image: "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202504/virat-kohli-205953494-16x9_0.jpg?VersionId=ENSiyeUvX0syTHd2vfCcbWNlqCUL6RvV&size=690:388",
-  techStack: ["React", "Node.js", "Express", "MongoDB"],
-  githubUrl: "https://github.com/anilyadav45/BLOG-WEB", 
-  liveUrl: "#",
-}
-,
-  {
-      id:4,
-    title:"Simple Resume Template Maker",
-    description:"An Ejs project which takes user information input and generate or make same type Resume.It was my first project to learn backend",
-    image:"https://d2xe0iugdha6pz.cloudfront.net/editor-uploads/2023/01/11/7_builder.png",
-    techStack:["Ejs","Express","Nodejs"],
-    githubUrl:"https://github.com/anilyadav45/RESUME-TEMPLATES-",
-    liveUrl:"#"
+    id: 3,
+    title: "Crickment - Mini Social App for Cricket Fans",
+    description:
+      "A lightweight social platform where users can post opinions, debate about their favorite players, and share cricket snaps. Built with full CRUD operations to manage posts, edit content, and delete discussions easily.",
+    image:
+      "https://akm-img-a-in.tosshub.com/indiatoday/images/story/202504/virat-kohli-205953494-16x9_0.jpg?VersionId=ENSiyeUvX0syTHd2vfCcbWNlqCUL6RvV&size=690:388",
+    techStack: ["React", "Node.js", "Express", "MongoDB"],
+    githubUrl: "https://github.com/anilyadav45/BLOG-WEB",
+    liveUrl: "#",
+    status: "Completed",
   },
-    {
-  id: 6,
-  title: "Wanderlust - Travel Listing Web App",
-  description:
-    "A full-stack Airbnb-inspired application that allows users to create, edit, view, and delete travel property listings. Includes client-side and server-side validation for robust data handling.",
-  image: "https://images.unsplash.com/photo-1657256031855-68029292ff34?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWlyYm5ifGVufDB8fDB8fHww", 
-  techStack: ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
-  githubUrl: "https://github.com/anilyadav45/Wanderlust", 
-  liveUrl: "#", 
-}
+  {
+    id: 4,
+    title: "Simple Resume Template Maker",
+    description:
+      "An Ejs project which takes user information input and generate or make same type Resume.It was my first project to learn backend",
+    image: "https://d2xe0iugdha6pz.cloudfront.net/editor-uploads/2023/01/11/7_builder.png",
+    techStack: ["Ejs", "Express", "Nodejs"],
+    githubUrl: "https://github.com/anilyadav45/RESUME-TEMPLATES-",
+    liveUrl: "#",
+    status: "In Progress",
+  },
+  {
+    id: 6,
+    title: "Wanderlust - Travel Listing Web App",
+    description:
+      "A full-stack Airbnb-inspired application that allows users to create, edit, view, and delete travel property listings. Includes client-side and server-side validation for robust data handling.",
+    image: "https://images.unsplash.com/photo-1657256031855-68029292ff34?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWlyYm5ifGVufDB8fDB8fHww",
+    techStack: ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
+    githubUrl: "https://github.com/anilyadav45/Wanderlust",
+    liveUrl: "#",
+    status: "Completed",
+  },
 ];
 
 export default function Projects() {
@@ -110,8 +117,7 @@ export default function Projects() {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">My Projects</h2>
           <div className="w-20 h-1 bg-[#3B82F6] dark:bg-[#60A5FA] mx-auto mb-6"></div>
           <p className="max-w-2xl mx-auto text-lg text-[#475569] dark:text-[#CBD5E1]">
-            Here are some of the projects I&apos;ve worked on. Each project
-            represents a unique challenge and learning experience.
+            Here are some of the projects I&apos;ve worked on.
           </p>
         </motion.div>
 
@@ -125,9 +131,20 @@ export default function Projects() {
             <motion.div
               key={project.id}
               variants={itemVariants}
-              className="bg-white dark:bg-[#1E293B] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
+              className="relative bg-white dark:bg-[#1E293B] rounded-xl overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300"
               whileHover={{ y: -5, transition: { duration: 0.3 } }}
             >
+              {/* ✅ Status Badge */}
+              <span
+                className={`absolute top-2 right-2 px-3 py-1 text-xs font-semibold rounded-full z-10 ${
+                  project.status === "Completed"
+                    ? "bg-green-500 text-white"
+                    : "bg-red-500 text-white"
+                }`}
+              >
+                {project.status}
+              </span>
+
               <div className="relative h-48 w-full">
                 <Image
                   src={project.image || "/placeholder.svg"}
@@ -136,6 +153,7 @@ export default function Projects() {
                   className="object-cover"
                 />
               </div>
+
               <div className="p-6">
                 <h3 className="text-xl font-bold mb-2">{project.title}</h3>
                 <p className="text-[#475569] dark:text-[#CBD5E1] mb-4">

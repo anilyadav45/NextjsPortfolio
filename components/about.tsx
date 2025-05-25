@@ -47,13 +47,13 @@ export default function About() {
             className="md:w-2/3"
           >
             <h3 className="text-2xl font-bold mb-4 text-[#3B82F6] dark:text-[#60A5FA]">
-              Computer Science Engineering Student
+              Computer Science Enthusiast from Nepal, Studying in India
             </h3>
             <p className="text-lg mb-6 leading-relaxed">
-              I&apos;m a CSE student from Nepal passionate about
-              building full-stack web applications, solving real-world problems,
-              and continuously learning.
+              I’m a CSE student originally from Nepal, currently pursuing my
+              degree at JNTUA in Andhra Pradesh, India.
             </p>
+
             <div className="flex flex-wrap gap-4">
               <div className="bg-[#F1F5F9] dark:bg-[#1E293B] px-4 py-2 rounded-lg">
                 <span className="font-semibold">Location:</span> India

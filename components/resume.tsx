@@ -74,19 +74,6 @@ export default function Resume() {
 
             <div className="space-y-8">
 
-              <div className="bg-white dark:bg-[#1E293B] p-6 rounded-xl shadow-md">
-                <h4 className="text-xl font-semibold mb-2">
-                  Self-Taught React & Backend Developer
-                </h4>
-                <p className="text-[#475569] dark:text-[#CBD5E1] mb-2">
-                  2023 - Present
-                </p>
-                <p className="text-sm">
-                  Learned full-stack development independently and built
-                  multiple functional applications using React, Express, and
-                  MongoDB.
-                </p>
-              </div>
 
               <div className="bg-white dark:bg-[#1E293B] p-6 rounded-xl shadow-md">
                 <h4 className="text-xl font-semibold mb-2">
@@ -108,10 +95,13 @@ export default function Resume() {
           transition={{ duration: 0.5, delay: 0.6 }}
           className="flex justify-center mt-12"
         >
-          <Button className="bg-[#3B82F6] hover:bg-[#2563EB] dark:bg-[#60A5FA] dark:hover:bg-[#3B82F6] text-white px-6 py-3 rounded-lg text-lg font-medium flex items-center gap-2">
-            <Download className="h-5 w-5" />
-            Download Resume
-          </Button>
+<a href="/resume.pdf" download>
+  <Button className="bg-[#3B82F6] hover:bg-[#2563EB] dark:bg-[#60A5FA] dark:hover:bg-[#3B82F6] text-white px-6 py-3 rounded-lg text-lg font-medium flex items-center gap-2">
+    <Download className="h-5 w-5" />
+    Download Resume
+  </Button>
+</a>
+
         </motion.div>
       </div>
     </section>
