@@ -3,9 +3,7 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import ThreeCube from "./ThreeCube";
-import { Float } from "@react-three/drei";
-//
+import ThreeAvatar from "./ThreeAvatar"; // 👈 make sure path is correct!
 
 export default function Hero() {
   const scrollToProjects = () => {
@@ -41,7 +39,7 @@ export default function Hero() {
             }}
             transition={{
               duration: Math.random() * 10 + 10,
-              repeat: Number.POSITIVE_INFINITY,
+              repeat: Infinity,
               repeatType: "reverse",
             }}
           />
@@ -91,14 +89,17 @@ export default function Hero() {
             </motion.div>
           </motion.div>
 
-          {/* 3D Cube */}
+          {/* 3D Avatar section (replaces ThreeCube) */}
           <motion.div
             initial={{ opacity: 0, scale: 0.8 }}
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 1, delay: 0.3 }}
-            className="w-full md:w-1/2 h-[400px]"
+            className="w-full md:w-1/2 h-[400px] z-10"
           >
-            <ThreeCube />
+            <ThreeAvatar />
+            <p className="text-center text-sm text-[#475569] dark:text-[#CBD5E1] mt-2">
+              That’s me, virtually 👨‍💻
+            </p>
           </motion.div>
         </div>
       </div>
@@ -112,12 +113,12 @@ export default function Hero() {
       >
         <motion.div
           animate={{ y: [0, 10, 0] }}
-          transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+          transition={{ duration: 1.5, repeat: Infinity }}
           className="w-6 h-10 rounded-full border-2 border-[#3B82F6] dark:border-[#60A5FA] flex justify-center"
         >
           <motion.div
             animate={{ y: [0, 15, 0] }}
-            transition={{ duration: 1.5, repeat: Number.POSITIVE_INFINITY }}
+            transition={{ duration: 1.5, repeat: Infinity }}
             className="w-1.5 h-3 bg-[#3B82F6] dark:bg-[#60A5FA] rounded-full mt-2"
           />
         </motion.div>

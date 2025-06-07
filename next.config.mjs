@@ -8,7 +8,16 @@ const nextConfig = {
   },
   images: {
     unoptimized: true,
+    remotePatterns: [
+      {
+        protocol: "https",
+        hostname: "models.readyplayer.me",
+      },
+    ],
   },
-}
+  experimental: {
+    serverActions: true,
+  },
+};
 
-export default nextConfig
+export default nextConfig;
