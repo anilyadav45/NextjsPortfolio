@@ -3,7 +3,6 @@
 import { motion } from "framer-motion";
 import { Button } from "@/components/ui/button";
 import { ArrowDown } from "lucide-react";
-import ThreeAvatar from "./ThreeAvatar"; // 👈 make sure path is correct!
 
 export default function Hero() {
   const scrollToProjects = () => {
@@ -48,58 +47,37 @@ export default function Hero() {
 
       {/* Content */}
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 z-10">
-        <div className="flex flex-col-reverse md:flex-row items-center justify-between gap-10">
-          {/* Text section */}
+        <div className="flex flex-col items-center justify-center text-center">
+          <motion.h1
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.2 }}
+            className="text-4xl md:text-6xl font-bold mb-4"
+          >
+            Hi, I&apos;m Anil Yadav 👋
+          </motion.h1>
+
+          <motion.p
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.5, delay: 0.4 }}
+            className="text-xl md:text-2xl mb-8 text-[#475569] dark:text-[#CBD5E1]"
+          >
+            Developer | Problem Solver | Tech Explorer
+          </motion.p>
+
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
-            transition={{ duration: 0.8 }}
-            className="text-center md:text-left flex-1"
+            transition={{ duration: 0.5, delay: 0.6 }}
           >
-            <motion.h1
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.2 }}
-              className="text-4xl md:text-6xl font-bold mb-4"
+            <Button
+              onClick={scrollToProjects}
+              className="bg-[#3B82F6] hover:bg-[#2563EB] dark:bg-[#60A5FA] dark:hover:bg-[#3B82F6] text-white px-6 py-3 rounded-lg text-lg font-medium"
             >
-              Hi, I&apos;m Anil Yadav 👋
-            </motion.h1>
-
-            <motion.p
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.4 }}
-              className="text-xl md:text-2xl mb-8 text-[#475569] dark:text-[#CBD5E1]"
-            >
-              Developer | Problem Solver | Tech Explorer
-            </motion.p>
-
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, delay: 0.6 }}
-            >
-              <Button
-                onClick={scrollToProjects}
-                className="bg-[#3B82F6] hover:bg-[#2563EB] dark:bg-[#60A5FA] dark:hover:bg-[#3B82F6] text-white px-6 py-3 rounded-lg text-lg font-medium"
-              >
-                Explore My Work
-                <ArrowDown className="ml-2 h-4 w-4" />
-              </Button>
-            </motion.div>
-          </motion.div>
-
-          {/* 3D Avatar section (replaces ThreeCube) */}
-          <motion.div
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={{ opacity: 1, scale: 1 }}
-            transition={{ duration: 1, delay: 0.3 }}
-            className="w-full md:w-1/2 h-[400px] z-10"
-          >
-            <ThreeAvatar />
-            <p className="text-center text-sm text-[#475569] dark:text-[#CBD5E1] mt-2">
-              That’s me, virtually 👨‍💻
-            </p>
+              Explore My Work
+              <ArrowDown className="ml-2 h-4 w-4" />
+            </Button>
           </motion.div>
         </div>
       </div>

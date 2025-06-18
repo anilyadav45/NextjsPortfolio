@@ -7,10 +7,12 @@ import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Textarea } from "@/components/ui/textarea";
 import { Github, Linkedin, Mail, MapPin, Phone } from "lucide-react";
+import { useState } from "react";
 
 export default function Contact() {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true, amount: 0.1 });
+  const [showPopup, setShowPopup] = useState(false);
 
   return (
     <section id="contact" className="py-20 bg-white dark:bg-[#111827]">
@@ -109,17 +111,17 @@ export default function Contact() {
             className="lg:w-2/3"
           >
             <form
-              action="https://formsubmit.co/el/cezaza"
+              action="https://formsubmit.co/rebelanil885@gmail.com"
               method="POST"
+              target="dummyIframe"
+              onSubmit={() => {
+                setShowPopup(true);
+                setTimeout(() => setShowPopup(false), 5000);
+              }}
               className="bg-[#F1F5F9] dark:bg-[#1E293B] p-8 rounded-xl shadow-md"
             >
               {/* Hidden fields for FormSubmit */}
               <input type="hidden" name="_captcha" value="false" />
-              <input
-                type="hidden"
-                name="_next"
-                value="https://your-portfolio-site.com/thankyou"
-              />
               <input
                 type="hidden"
                 name="_subject"
@@ -196,6 +198,28 @@ export default function Contact() {
                 Send Message
               </button>
             </form>
+            <iframe name="dummyIframe" style={{ display: "none" }} />
+
+            {/* pop pop after msg received  */}
+            {showPopup && (
+              <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-60">
+                <div className="bg-white dark:bg-[#1E293B] text-center p-8 rounded-xl shadow-lg max-w-sm w-full animate-fadeIn">
+                  <h2 className="text-2xl font-bold text-[#3B82F6] dark:text-[#60A5FA] mb-2">
+                    Thanks for reaching out! 🙌
+                  </h2>
+                  <p className="text-[#475569] dark:text-[#CBD5E1] mb-4">
+                    I appreciate your message and will get back to you soon.
+                  </p>
+                  <button
+                    onClick={() => setShowPopup(false)}
+                    className="mt-2 px-4 py-2 bg-[#3B82F6] hover:bg-[#2563EB] dark:bg-[#60A5FA] dark:hover:bg-[#3B82F6] text-white rounded-md"
+                  >
+                    Close
+                  </button>
+                </div>
+              </div>
+            )}
+            {/* pop up msg  */}
           </motion.div>
         </div>
       </div>
