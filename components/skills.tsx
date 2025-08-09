@@ -16,6 +16,7 @@ import {
   Settings2,
   Laptop2,
   Boxes,
+  FileCode,
 } from "lucide-react";
 
 interface Skill {
@@ -28,22 +29,21 @@ const categorizedSkills: Record<string, Skill[]> = {
   Development: [
     { name: "HTML", icon: <Code className="w-10 h-10" />, level: 80 },
     { name: "React", icon: <Atom className="w-10 h-10" />, level: 60 },
-    { name: "Tailwind", icon: <Paintbrush className="w-10 h-10" />, level: 90 },
-    { name: "EJS", icon: <FileText className="w-10 h-10" />, level: 90 },
-    { name: "Node.js", icon: <ServerCog className="w-10 h-10" />, level: 75 },
+    { name: "Tailwind", icon: <Paintbrush className="w-10 h-10" />, level: 85 },
+    { name: "EJS", icon: <FileText className="w-10 h-10" />, level: 80 },
+    { name: "Node.js", icon: <ServerCog className="w-10 h-10" />, level: 80 },
     {
       name: "Express",
       icon: <TerminalSquare className="w-10 h-10" />,
       level: 80,
     },
-    { name: "MongoDB", icon: <Database className="w-10 h-10" />, level: 80 },
-    { name: "Java", icon: <Coffee className="w-10 h-10" />, level: 75 },
-    { name: "C", icon: <Code className="w-10 h-10" />, level: 70 },
-    { name: "DSA", icon: <FunctionSquare className="w-10 h-10" />, level: 60 },
+    { name: "TypeScript", icon: <FileCode className="w-10 h-10" />, level: 65 },
+    { name: "MongoDB", icon: <Database className="w-10 h-10" />, level: 75 },
+    { name: "Java", icon: <Coffee className="w-10 h-10" />, level: 80 },
   ],
   "Tools & Platforms": [
-    { name: "Git", icon: <GitBranch className="w-10 h-10" />, level: 85 },
-    { name: "Vite", icon: <Settings2 className="w-10 h-10" />, level: 80 },
+    { name: "Git", icon: <GitBranch className="w-10 h-10" />, level: 75 },
+    { name: "Vite", icon: <Settings2 className="w-10 h-10" />, level: 60 },
     {
       name: "Hoppscotch",
       icon: <Settings2 className="w-10 h-10" />,
@@ -56,9 +56,9 @@ const categorizedSkills: Record<string, Skill[]> = {
     {
       name: "Linux",
       icon: <TerminalSquare className="w-10 h-10" />,
-      level: 85,
+      level: 75,
     },
-    { name: "Windows", icon: <Laptop2 className="w-10 h-10" />, level: 95 },
+    { name: "Windows", icon: <Laptop2 className="w-10 h-10" />, level: 85 },
   ],
 };
 
