@@ -33,15 +33,15 @@ const projects: Project[] = [
   },
   {
     id: 2,
-    title: "Freelancing Platform",
+    title: "Mini WhatsApp Chats",
     description:
-      "A platform connecting freelancers with clients, featuring secure payments and project management.",
+      "A mini WhatsApp chat app is a simple chat app that takes user input(name and message) and displays in chat sections with feature of delete and edit which is totally functinal and it was for learnig purpose how frontend and backend works together using (CRUD) operations",
     image:
-      "https://www.cheggindia.com/wp-content/uploads/2021/02/15-Freelance-Jobs-for-Students-to-Earn-Quick-Money.png",
-    techStack: ["React", "Node.js", "MongoDB", "Express"],
-    githubUrl: "#",
+      "https://imgs.search.brave.com/8jBNhrTLq0OibAGLMFxQKDS7ljEq8s7uYUDgTTGUOpU/rs:fit:860:0:0:0/g:ce/aHR0cHM6Ly9lbGZz/aWdodC5jb20vd3At/Y29udGVudC91cGxv/YWRzLzIwMjIvMTEv/YmxvZy1ob3ctdG8t/aW50ZWdyYXRlLXdo/YXRzYXBwLWdlbmVy/YWwtMTAyNHg1Mzgu/anBn",
+    techStack: ["Ejs", "Node.js", "MongoDB", "Express",'Css'],
+    githubUrl: "https://github.com/anilyadav45/Mini-Whatsapp",
     liveUrl: "#",
-    status: "In Progress",
+    status: "Completed",
   },
   {
     id: 3,
@@ -60,21 +60,35 @@ const projects: Project[] = [
     title: "Simple Resume Template Maker",
     description:
       "An Ejs project which takes user information input and generate or make same type Resume.It was my first project to learn backend",
-    image: "https://d2xe0iugdha6pz.cloudfront.net/editor-uploads/2023/01/11/7_builder.png",
+    image:
+      "https://d2xe0iugdha6pz.cloudfront.net/editor-uploads/2023/01/11/7_builder.png",
     techStack: ["Ejs", "Express", "Nodejs"],
     githubUrl: "https://github.com/anilyadav45/RESUME-TEMPLATES-",
     liveUrl: "#",
     status: "In Progress",
   },
   {
-    id: 6,
+    id: 5,
     title: "Wanderlust - Travel Listing Web App",
     description:
       "A full-stack Airbnb-inspired application that allows users to create, edit, view, and delete travel property listings. Includes client-side and server-side validation for robust data handling.",
-    image: "https://images.unsplash.com/photo-1657256031855-68029292ff34?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWlyYm5ifGVufDB8fDB8fHww",
+    image:
+      "https://images.unsplash.com/photo-1657256031855-68029292ff34?fm=jpg&q=60&w=3000&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8YWlyYm5ifGVufDB8fDB8fHww",
     techStack: ["Node.js", "Express", "MongoDB", "EJS", "Bootstrap"],
     githubUrl: "https://github.com/anilyadav45/Wanderlust",
     liveUrl: "#",
+    status: "Completed",
+  },
+  {
+    id: 6,
+    title: "Tic Tac Toe Game",
+    description:
+      "A classic Tic Tac Toe Game built with Html,Css and JavaScript for learning purpose",
+    image:
+      "https://t4.ftcdn.net/jpg/14/57/47/15/360_F_1457471559_gN4GRQWeMzaQRhKX0TPK6Gq98PRZxscQ.webp",
+    techStack: ["HTML", "CSS", "JavaScript"],
+    githubUrl: "https://github.com/anilyadav45/TIC-TAC-TOE-JS-PROJECT",
+    liveUrl: "https://tic-tac-toe-js-project-pi.vercel.app/",
     status: "Completed",
   },
 ];

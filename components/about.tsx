@@ -35,7 +35,7 @@ export default function About() {
                 src="/profile.jpeg"
                 alt="Anil Yadav"
                 fill
-                className="object-cover scale-150"
+                className="object-cover scale-150 "
               />
             </div>
           </motion.div>
